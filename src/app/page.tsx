@@ -73,10 +73,8 @@ export default function Home() {
             text="              Test your knowledge on digital security, ethical hacking,
               encryption, and best practices to stay safe online."
           >
-            <div className="h-full w-full flex items-center justify-center">
-              <div className="h-full w-4/5 flex items-center justify-center overflow-hidden">
-                <PixelImage particleDiameter={4} src="/robot.png" />
-              </div>
+            <div className="h-full rounded-lg w-full flex items-center justify-center overflow-hidden">
+              <PixelImage particleDiameter={4} src="/robot.png" />
             </div>
           </TextCard>
 
