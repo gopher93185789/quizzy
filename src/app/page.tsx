@@ -1,9 +1,10 @@
+import { PlusSideBar } from "@/components/PlusSideBar";
 import { TextCard } from "@/components/TextCard";
 
 export default function Home() {
   return (
     <>
-      <div className="w-full h-[800px] overflow-hidden  relative bg-grid flex sm:items-center mt-36 sm:mt-0 justify-center">
+      <div className="w-full h-[400px] sm:h-[800px] overflow-hidden  relative bg-grid flex sm:items-center justify-center">
         <div className="absolute -top-24 left-48 h-1/2 aspect-video opacity-40">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +48,7 @@ export default function Home() {
           </svg>
         </div>
         <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
-        <div className="h-fit w-full sm:w-1/2  flex flex-col items-center justify-center">
+        <div className="h-fit mt-36 sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
           <p className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Quizzes, Simplified
           </p>
@@ -63,7 +64,8 @@ export default function Home() {
       </div>
 
       <div className="w-full flex flex-col items-center pb-20 bg-[#060606]">
-        <div className="flex flex-row justify-center gap-5 w-full h-full">
+        <PlusSideBar />
+        <div className="flex flex-col px-5 sm:flex-row justify-center gap-5 w-full h-full">
           <TextCard
             title="Cybersecurity"
             titleColor="text-orange-600"
