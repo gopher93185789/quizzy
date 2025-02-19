@@ -49,9 +49,9 @@ export default function Home() {
         </div>
         <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
         <div className="h-fit mt-36 sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
-          <p className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          <h1 className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Quizzes, Simplified
-          </p>
+          </h1>
           <p className="sm:text-2xl w-2/3 sm:w-1/2 font-bold text-center text-white text-opacity-50">
             Quizzy is the ultimate platform for fun, engaging, and gamified
             learning.
