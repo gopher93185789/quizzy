@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body {
-    height: 100%;
-  }
-}
 
 body {
   background-color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .bg-grid {
