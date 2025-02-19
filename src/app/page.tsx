@@ -44,7 +44,7 @@ export default function Home() {
             </defs>
           </svg>
         </div>
-        <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-neutral-950" />
+        <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
         <div className="h-fit w-full sm:w-1/2  flex flex-col items-center justify-center">
           <p className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             quizzez made easy
@@ -59,8 +59,36 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="h-screen w-full bg-neutral-950"></div>
+
+      <div className="w-full flex flex-col items-center pb-20 bg-[#060606]">
+        <div className="flex flex-row justify-center gap-5 w-full h-full">
+          <div className="h-[80vh] shadow-inset p-10 w-1/4 flex flex-col rounded-xl shadow-lg bg-[#050505]">
+            <p className="w-full text-5xl text-orange-600 font-bold">
+              Cybersecurity
+            </p>
+            <p className="w-full text-lg font-medium mt-5 overflow-hidden text-white text-opacity-50">
+              Test your knowledge on digital security, ethical hacking,
+              encryption, and best practices to stay safe online.
+            </p>
+          </div>
+          <div className="h-[80vh] shadow-inset p-10 w-1/4 flex flex-col rounded-xl shadow-lg bg-[#050505]">
+            <p className="w-full text-5xl text-blue-500 font-bold">
+              Social Issues
+            </p>
+            <p className="w-full text-lg font-medium mt-5 overflow-hidden text-white text-opacity-50">
+              Explore quizzes on global challenges like climate change, human
+              rights, and social justice to expand your awareness.
+            </p>
+          </div>
+          <div className="h-[80vh] shadow-inset p-10 w-1/4 flex flex-col rounded-xl shadow-lg bg-[#050505]">
+            <p className="w-full text-5xl text-yellow-200 font-bold">AI</p>
+            <p className="w-full text-lg font-medium mt-5 overflow-hidden text-white text-opacity-50">
+              Dive into the world of artificial intelligence, covering machine
+              learning, neural networks, ethics, and future implications.
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
-
