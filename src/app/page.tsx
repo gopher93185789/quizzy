@@ -49,11 +49,11 @@ export default function Home() {
         <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
         <div className="h-fit w-full sm:w-1/2  flex flex-col items-center justify-center">
           <p className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            quizzez made easy
+            Quizzes, Simplified
           </p>
           <p className="sm:text-2xl w-2/3 sm:w-1/2 font-bold text-center text-white text-opacity-50">
-            Quizzy is the #1 place to learn and take quizzez in a gameified
-            fashion
+            Quizzy is the ultimate platform for fun, engaging, and gamified
+            learning.
           </p>
 
           <button className="text-black font-bold mt-5 sm:mt-10 py-1 px-8 text-2xl rounded-lg bg-white hover:bg-opacity-70 ease-in-out duration-300">
