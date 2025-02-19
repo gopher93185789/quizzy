@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/Navabar";
 
 export const metadata: Metadata = {
   title: "Quizzy",
@@ -13,7 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="w-full flex flex-col items-center">
+        <Navbar />
         {children}
       </body>
     </html>
