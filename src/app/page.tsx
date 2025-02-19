@@ -48,7 +48,7 @@ export default function Home() {
           </svg>
         </div>
         <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
-        <div className="h-fit mt-36 sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
+        <div className="h-fit mt-36 animate-slideup sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
           <h1 className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Quizzes, Simplified
           </h1>
