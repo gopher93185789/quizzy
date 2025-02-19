@@ -1,10 +1,48 @@
-export function Navbar() {
-    return (
-        <>
-            <div className="w-4/5 h-20 flex flex-row items-center">
-                <img src="/rcok.png" className="h-full aspect-square grayscale hover:grayscale-0 duration-300 ease-in-out hover:animate-spin"></img>
-                <button className="px-5 ml-auto rounded-md text-center h-fit py-1 bg-[#FF4000] text-white font-bold">Dashboard</button>
+"use client";
+import Link from "next/link";
+import { useState } from "react";
+
+export function RenderButtons() {
+  const [page, setPage] = useState<string>("home");
+
+  const buttons = [
+    { page: "home", href: "/", title: "Home" },
+    { page: "leaderboard", href: "/leaderboard", title: "Leaderboard" },
+    { page: "quiz", href: "/quiz", title: "Take the quiz" },
+  ];
+
+  return (
+    <>
+      <div className="h-full w-fit flex flex-row ml-auto">
+        {buttons.map((item, key: number) => (
+          <Link key={key} href={item.href} onClick={() => setPage(item.page)}>
+            <div className="group flex items-center justify-center duration-300 h-full w-fit border border-y-0 hover:bg-[#FF4000]  border-white border-l-0 border-opacity-15 ease-in-out">
+              <p
+                className={`px-5 text-center ${
+                  page === item.page ? "text-opacity-100" : "text-opacity-50"
+                } group-hover:text-opacity-100 duration-300  ease-in-out  text-white font-bold`}
+              >
+                {item.title}
+              </p>
             </div>
-        </>
-    )
+          </Link>
+        ))}
+      </div>
+    </>
+  );
+}
+
+export function Navbar() {
+  return (
+    <>
+      <div className="w-full z-50 h-12 flex bg-black border border-t-0 border-x-0 items-center  border-white border-opacity-15">
+        <img
+          src="/rcok.png"
+          className="h-full w-28 grayscale hover:grayscale-0 border border-y-0 border-l-0 border-white border-opacity-15 duration-300 ease-in-out hover:animate-spin"
+        />
+
+        <RenderButtons />
+      </div>
+    </>
+  );
 }
