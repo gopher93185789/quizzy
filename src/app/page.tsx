@@ -1,4 +1,4 @@
-import { Head, Shield, World } from "@/components/AsciiIcons";
+import { HeadRandomized, ShieldRandomized, WorldRandomized } from "@/components/AsciiIcons";
 import { PlusSideBar } from "@/components/PlusSideBar";
 import { Spotlight } from "@/components/Spotlight";
 import { TextCard } from "@/components/TextCard";
@@ -44,7 +44,7 @@ const CardSection = () => {
             text="              Test your knowledge on digital security, ethical hacking,
               encryption, and best practices to stay safe online."
           >
-            <Shield />
+            <ShieldRandomized />
           </TextCard>
 
           <TextCard
@@ -53,7 +53,7 @@ const CardSection = () => {
             text="Explore quizzes on global challenges like climate change, human
               rights, and social justice to expand your awareness."
           >
-            <World />
+            <WorldRandomized />
           </TextCard>
 
           <TextCard
@@ -62,7 +62,7 @@ const CardSection = () => {
             text="               Dive into the world of artificial intelligence, covering machine
               learning, neural networks, ethics, and future implications."
           >
-            <Head />
+            <HeadRandomized />
           </TextCard>
         </div>
       </div>
