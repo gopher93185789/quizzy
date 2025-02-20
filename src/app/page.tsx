@@ -36,13 +36,10 @@ export default function Home() {
             <div className="bg-black shadow-outset  w-300 aspect-video overflow-hidden rounded-lg rotate-2">
               {/* placeholder app demo should go here */}
               <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/T-qAtAKjqwc?si=oaAk0d2dmddIEs21"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-              ></iframe>
+                src="https://www.youtube.com/embed/fRk6K-H1Lxc?autoplay=1&loop=1&playlist=fRk6K-H1Lxc"
+                className="h-full w-full"
+                allow="autoplay; encrypted-media"
+              />
             </div>
           </div>
         </div>
