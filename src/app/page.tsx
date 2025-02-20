@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <div className="fixed hidden sm:flex z-10 left-0  h-full w-16 border border-white/10 border-l-0 border-y-0"></div>
+      <div className="fixed hidden sm:flex z-10 left-0  h-full w-16 border border-white/10 border-l-0 border-y-0"/>
 
       <div className="w-full h-[400px] sm:h-[800px] overflow-hidden  relative bg-grid flex sm:items-center justify-center">
         <div className="absolute -top-24 left-32 h-1/2 aspect-video opacity-40">
@@ -52,8 +52,9 @@ export default function Home() {
             </defs>
           </svg>
         </div>
+
         <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
-        <div className="h-fit mt-36 select-none animate-slideup sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
+        <div className="h-fit mt-36 select-none  sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
           <h1 className="text-4xl overflow-hidden text-nowrap sm:text-7xl h-14 sm:h-20 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400/40">
             Quizzes, Simplified
           </h1>
