@@ -29,9 +29,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full h-175 bg-grid relative p-0 m-0 flex overflow-hidden items-center justify-center">
+      <div className="w-full h-76 lg:h-175 bg-grid relative p-0 m-0 flex overflow-hidden items-center justify-center">
         <PlusSideBar />
-        <div className="h-1/4 bottom-0 z-5 w-full absolute bg-gradient-to-t from-primary" />
+        <div className="h-1/4 -bottom-3 lg:bottom-0 z-5 w-full absolute bg-gradient-to-t from-primary" />
         <div className="absolute w-full -bottom-15 h-full">
           <div className="w-full h-full flex items-center justify-center">
             <div className="bg-black shadow-outset  w-300 aspect-video overflow-hidden rounded-lg rotate-2">
