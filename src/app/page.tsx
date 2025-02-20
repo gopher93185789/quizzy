@@ -1,3 +1,4 @@
+import { Head, Shield } from "@/components/AsciiIcons";
 import { PlusSideBar } from "@/components/PlusSideBar";
 import { TextCard } from "@/components/TextCard";
 import Link from "next/link";
@@ -79,29 +80,7 @@ export default function Home() {
             text="              Test your knowledge on digital security, ethical hacking,
               encryption, and best practices to stay safe online."
           >
-            <div className="h-full w-full my-5">
-              <pre className='text-white/50 w-full text-center text-sm'>              $$$$$              </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>          X$$$     $$$X          </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>     $$$$$$    $$$    $$$$$X     </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$$$X       $$$$ $ $$$$       $$$$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$X  $$$$$$$     $     $$$$$$$  $$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$$ $$           $           $$ $$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$$ X$           $           $$ $$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$$              $           $$ $$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$$ $$X          $          $$X $$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>X$  $$          $          $$  $$</pre>
-              <pre className='text-white/50 w-full text-center text-sm'>$$$ $$          $          $$ $$X</pre>
-              <pre className='text-white/50 w-full text-center text-sm'> $$  $$         $         $$  $$ </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>  $$ $$$        $        $$$ $$  </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>  $$$ X$$       $       $$X $$X  </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>   $$$ X$$      $      $$X X$$   </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>    X$$  $$     $     $$X $$$    </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>     X$$  $$$   $   $$   $$X     </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>       $$$  $$$ $ $$$  $$$       </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>         $$$  X$$$$  $$$         </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>           $$$     $$$           </pre>
-              <pre className='text-white/50 w-full text-center text-sm'>             $$$$$$$             </pre>
-      </div>
+           <Shield />
           </TextCard>
 
           <TextCard
@@ -116,7 +95,7 @@ export default function Home() {
             titleColor="text-yellow-200"
             text="               Dive into the world of artificial intelligence, covering machine
               learning, neural networks, ethics, and future implications."
-          />
+          ><Head /></TextCard>
         </div>
       </div>
     </>
