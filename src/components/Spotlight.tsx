@@ -1,7 +1,7 @@
 export function Spotlight() {
   return (
     <>
-      <div className="absolute -top-24 left-32 h-1/2 aspect-video opacity-40">
+      <div className="absolute -left-32 -top-24 lg:left-32 h-1/2 aspect-video opacity-40">
         <svg
           className="animate-spotlight delay-100"
           xmlns="http://www.w3.org/2000/svg"
