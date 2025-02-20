@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
@@ -13,10 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="w-full flex  flex-col items-center">
-        {children}
-      </body>
-    </html>
+    <div className="w-full flex  flex-col items-center">
+    <Navbar />
+    {children}
+    </div>
   );
 }
