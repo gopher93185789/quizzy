@@ -4,7 +4,7 @@ import { Spotlight } from "@/components/Spotlight";
 import { TextCard } from "@/components/TextCard";
 import Link from "next/link";
 
-export default function Home() {
+const HeroSection = () => {
   return (
     <>
       <div className="fixed hidden lg:flex z-10 left-0 h-full w-16 border border-white/10 border-l-0 border-y-0" />
@@ -28,29 +28,19 @@ export default function Home() {
           </Link>
         </div>
       </div>
+    </>
+  );
+};
 
-      <div className="w-full h-76 lg:h-175 bg-grid relative p-0 m-0 flex overflow-hidden items-center justify-center">
-        <div className="h-1/4 -bottom-3 lg:bottom-0 z-5 w-full absolute bg-gradient-to-t from-primary" />
-        <div className="absolute w-full -bottom-15 h-full">
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="bg-black shadow-outset  w-300 aspect-video overflow-hidden rounded-lg rotate-2">
-              {/* placeholder app demo should go here */}
-              <iframe
-                src="https://www.youtube.com/embed/fRk6K-H1Lxc?autoplay=1&loop=1&playlist=fRk6K-H1Lxc"
-                className="h-full w-full"
-                allow="autoplay; encrypted-media"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
+const CardSection = () => {
+  return (
+    <>
       <div className="w-full flex flex-col items-center py-20 bg-primary">
         <PlusSideBar />
         <div className="flex flex-col px-5 lg:flex-row justify-center gap-5 w-full h-full">
           <TextCard
             title="Cybersecurity"
-            titleColor="text-orange-600"
+            titleColor="text-accent"
             text="              Test your knowledge on digital security, ethical hacking,
               encryption, and best practices to stay safe online."
           >
@@ -76,10 +66,96 @@ export default function Home() {
           </TextCard>
         </div>
       </div>
+    </>
+  );
+};
 
-      <div className="h-screen w-full bg-primary">
+const TrophySection = () => {
+  return (
+    <>
+      <div className="h-fit w-full flex flex-col gap-5 pb-20 items-center bg-primary">
         <PlusSideBar />
+        <p className="text-4xl lg:text-6xl leading-tight  font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-950 to-[#F8C63D]">
+          Get rewarded for learning
+        </p>
+        <div className="flex group flex-col w-3/4 p-5 gap-5 ">
+          <p className="text-white/25 w-full text-center text-2xl font-bold">
+            <span className="group-hover:text-accent duration-300 ease-in-out">
+              Cybersecurity
+            </span>{" "}
+            Badges
+          </p>
+          <div className="w-full flex flex-row gap-5 justify-center">
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+          </div>
+        </div>
+
+        <div className="flex group flex-col w-3/4 p-5 gap-5">
+          <p className="text-white/25 w-full text-center text-2xl font-bold">
+            <span className="group-hover:text-blue-500 duration-300 ease-in-out">
+              Social media
+            </span>{" "}
+            Badges
+          </p>
+          <div className="w-full flex flex-row gap-5 justify-center ">
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+          </div>
+        </div>
+
+        <div className="flex group flex-col w-3/4 p-5 gap-5">
+          <p className="text-white/25 w-full text-center text-2xl font-bold">
+            <span className="group-hover:text-yellow-200 duration-300 ease-in-out">
+              AI
+            </span>{" "}
+            Badges
+          </p>
+          <div className="w-full flex flex-row gap-5 justify-center ">
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+            <div className="size-36 bg-amber-600"></div>
+          </div>
+        </div>
       </div>
+    </>
+  );
+};
+
+export default function Home() {
+  return (
+    <>
+      <HeroSection />
+
+      <div className="w-full h-76 lg:h-175 bg-grid relative p-0 m-0 flex overflow-hidden items-center justify-center">
+        <div className="h-1/4 -bottom-3 lg:bottom-0 z-5 w-full absolute bg-gradient-to-t from-primary" />
+        <div className="absolute w-full -bottom-15 h-full">
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="bg-black shadow-outset  w-300 aspect-video overflow-hidden rounded-lg rotate-2">
+              {/* placeholder app demo should go here */}
+              <iframe
+                src="https://www.youtube.com/embed/fRk6K-H1Lxc?autoplay=1&loop=1&playlist=fRk6K-H1Lxc"
+                className="h-full w-full"
+                allow="autoplay; encrypted-media"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CardSection />
+      <TrophySection />
     </>
   );
 }
