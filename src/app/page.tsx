@@ -92,7 +92,7 @@ const TrophySection = () => {
             </span>{" "}
             Badges
           </p>
-          <div className="w-full flex flex-row gap-5 justify-center">
+          <div className="w-full flex flex-col sm:flex-row items-center gap-5 justify-center">
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
@@ -108,7 +108,7 @@ const TrophySection = () => {
             </span>{" "}
             Badges
           </p>
-          <div className="w-full flex flex-row gap-5 justify-center ">
+          <div className="w-full flex flex-col sm:flex-row items-center gap-5 justify-center ">
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
@@ -124,7 +124,7 @@ const TrophySection = () => {
             </span>{" "}
             Badges
           </p>
-          <div className="w-full flex flex-row gap-5 justify-center ">
+          <div className="w-full flex flex-col sm:flex-row items-center gap-5 justify-center ">
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
