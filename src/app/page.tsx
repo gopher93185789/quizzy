@@ -1,4 +1,4 @@
-import { Head, Shield } from "@/components/AsciiIcons";
+import { Head, Shield, World } from "@/components/AsciiIcons";
 import { PlusSideBar } from "@/components/PlusSideBar";
 import { TextCard } from "@/components/TextCard";
 import Link from "next/link";
@@ -80,7 +80,7 @@ export default function Home() {
             text="              Test your knowledge on digital security, ethical hacking,
               encryption, and best practices to stay safe online."
           >
-           <Shield />
+            <Shield />
           </TextCard>
 
           <TextCard
@@ -88,14 +88,18 @@ export default function Home() {
             titleColor="text-blue-500"
             text="Explore quizzes on global challenges like climate change, human
               rights, and social justice to expand your awareness."
-          />
+          >
+            <World />
+          </TextCard>
 
           <TextCard
             title="AI"
             titleColor="text-yellow-200"
             text="               Dive into the world of artificial intelligence, covering machine
               learning, neural networks, ethics, and future implications."
-          ><Head /></TextCard>
+          >
+            <Head />
+          </TextCard>
         </div>
       </div>
     </>

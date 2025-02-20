@@ -59,3 +59,31 @@ export function Head() {
     </>
 }
 
+
+export function World() {
+    return <>
+        <div className="h-full w-full flex justify-center items-center">
+            <div className="h-fit w-fit">
+                <pre className='text-white/50 w-full text-center text-sm'>  @@@@@@@@@@@@@@@@@@@@     @@@@@@@@       </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@     </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@                     @@@@@@@@@@@@@    </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@                    @@@@@@@@@@@@@@    </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@                     @@@@@@@@@@@@@    </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@                       @@@@@@@@@@      </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>                       @@@@@  @@   @@@@@  </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>        @@@@@        @@@@@@@@@@@@@@@@@@@@ </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>      @@@@@@@@@@     @@@@@@@@@@@@@@@@@@@@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>    @@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>    @@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@@  </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>     @@@@@@@@@@@@         @@@@@@@@@@      </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>   @@  @@@@@@@@ @@                        </pre>
+                <pre className='text-white/50 w-full text-center text-sm'>  @@@@@@@@  @@@@@@@@                   @@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@@@@@@@@@@@@@@@@@@                  @@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@@@@@@@@@@@@@@@@@@@                 @@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@@@@@@@@@@@@@@@@@@@                @@@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@</pre>
+                <pre className='text-white/50 w-full text-center text-sm'>   @@@@@@@@@@@@@@@      @@@@@@@@@@@@@@@@  </pre>
+            </div>
+        </div>
+    </>
+}
