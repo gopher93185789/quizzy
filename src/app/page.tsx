@@ -78,7 +78,31 @@ export default function Home() {
             titleColor="text-orange-600"
             text="              Test your knowledge on digital security, ethical hacking,
               encryption, and best practices to stay safe online."
-          />
+          >
+            <div className="h-full w-full my-5">
+              <pre className='text-white/50 w-full text-center text-sm'>              $$$$$              </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>          X$$$     $$$X          </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>     $$$$$$    $$$    $$$$$X     </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$$$X       $$$$ $ $$$$       $$$$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$X  $$$$$$$     $     $$$$$$$  $$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$$ $$           $           $$ $$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$$ X$           $           $$ $$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$$              $           $$ $$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$$ $$X          $          $$X $$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>X$  $$          $          $$  $$</pre>
+              <pre className='text-white/50 w-full text-center text-sm'>$$$ $$          $          $$ $$X</pre>
+              <pre className='text-white/50 w-full text-center text-sm'> $$  $$         $         $$  $$ </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>  $$ $$$        $        $$$ $$  </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>  $$$ X$$       $       $$X $$X  </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>   $$$ X$$      $      $$X X$$   </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>    X$$  $$     $     $$X $$$    </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>     X$$  $$$   $   $$   $$X     </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>       $$$  $$$ $ $$$  $$$       </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>         $$$  X$$$$  $$$         </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>           $$$     $$$           </pre>
+              <pre className='text-white/50 w-full text-center text-sm'>             $$$$$$$             </pre>
+      </div>
+          </TextCard>
 
           <TextCard
             title="Social media"
