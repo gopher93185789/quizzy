@@ -75,9 +75,16 @@ const TrophySection = () => {
     <>
       <div className="h-fit w-full flex flex-col gap-5 pb-20 items-center bg-primary">
         <PlusSideBar />
-        <p className="text-4xl lg:text-6xl leading-tight  font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-950 to-[#F8C63D]">
-          Get rewarded for learning
-        </p>
+        <div className="w-full h-fit flex items-center flex-col">
+          <p className="text-4xl lg:text-6xl leading-tight  font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-950 to-[#F8C63D]">
+            Get rewarded for learning
+          </p>
+          <p className="text-white/50  text-xl font-bold">
+            Earn badges by Completeing quizzez and scoring top 10 in the
+            leaderboard
+          </p>
+        </div>
+
         <div className="flex group flex-col w-3/4 p-5 gap-5 ">
           <p className="text-white/25 w-full text-center text-2xl font-bold">
             <span className="group-hover:text-accent duration-300 ease-in-out">
@@ -86,7 +93,6 @@ const TrophySection = () => {
             Badges
           </p>
           <div className="w-full flex flex-row gap-5 justify-center">
-            <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
@@ -108,7 +114,6 @@ const TrophySection = () => {
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
-            <div className="size-36 bg-amber-600"></div>
           </div>
         </div>
 
@@ -125,9 +130,9 @@ const TrophySection = () => {
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
             <div className="size-36 bg-amber-600"></div>
-            <div className="size-36 bg-amber-600"></div>
           </div>
         </div>
+        
       </div>
     </>
   );
