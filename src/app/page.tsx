@@ -12,7 +12,7 @@ export default function Home() {
       <div className="w-full h-[400px] lg:h-[800px] overflow-hidden  relative bg-grid flex lg:items-center justify-center">
         <Spotlight />
 
-        <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
+        <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-primary" />
         <div className="h-fit mt-36 select-none  lg:mt-0 w-full lg:w-1/2  flex flex-col items-center justify-center">
           <h1 className="text-4xl overflow-hidden text-nowrap lg:text-7xl h-14 lg:h-20 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400/40">
             Quizzes, Simplified
@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center pb-20 bg-[#060606]">
+      <div className="w-full flex flex-col items-center pb-20 bg-primary">
         <PlusSideBar />
         <div className="flex flex-col px-5 lg:flex-row justify-center gap-5 w-full h-full">
           <TextCard
@@ -62,6 +62,8 @@ export default function Home() {
           </TextCard>
         </div>
       </div>
+
+      <div className="h-screen w-full bg-primary"></div>
     </>
   );
 }

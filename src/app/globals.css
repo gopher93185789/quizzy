@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #060606;
+  --color-accent: #FF4000;
+}
+
 body {
   background-color: black;
 }
@@ -32,6 +37,7 @@ body {
     transform: translateY(0);
   }
 }
+
 
 @keyframes spotlightFade {
     0% {
