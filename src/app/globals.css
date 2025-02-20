@@ -32,3 +32,24 @@ body {
     transform: translateY(0);
   }
 }
+
+@keyframes spotlightFade {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.animate-spotlight {
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    height: 169%;
+    width: 138%;
+    opacity: 0;
+    animation: spotlightFade 1.8s ease-out forwards;
+}

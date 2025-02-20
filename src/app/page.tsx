@@ -8,8 +8,9 @@ export default function Home() {
       <div className="fixed hidden sm:flex z-10 left-0  h-full w-16 border border-white/10 border-l-0 border-y-0"></div>
 
       <div className="w-full h-[400px] sm:h-[800px] overflow-hidden  relative bg-grid flex sm:items-center justify-center">
-        <div className="absolute -top-24 left-48 h-1/2 aspect-video opacity-40">
+        <div className="absolute -top-24 left-32 h-1/2 aspect-video opacity-40">
           <svg
+            className="animate-spotlight delay-100"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 3787 2842"
             fill="none"
@@ -60,7 +61,10 @@ export default function Home() {
             learning.
           </p>
 
-          <Link href={"/quiz"} className="text-black font-bold mt-5 sm:mt-10 py-1 px-8 text-2xl rounded-lg bg-white hover:bg-white/70 ease-in-out duration-300">
+          <Link
+            href={"/quiz"}
+            className="text-black font-bold mt-5 sm:mt-10 py-1 px-8 text-2xl rounded-lg bg-white hover:bg-white/70 ease-in-out duration-300"
+          >
             Start now
           </Link>
         </div>
