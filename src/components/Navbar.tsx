@@ -42,7 +42,7 @@ export function RenderButtons() {
 export function Navbar() {
   return (
     <>
-      <div className="w-full z-50 h-12 flex  bg-black border border-t-0 border-x-0 items-center  border-white/15">
+      <div className="w-full z-50 h-12 flex  bg-[#050505] border border-t-0 border-x-0 items-center  border-white/15">
         <img
           src="/rcok.png"
           className="h-full sm:flex hidden w-28 grayscale hover:grayscale-0 border border-y-0 border-l-0 border-white/15 duration-300 ease-in-out hover:animate-spin"

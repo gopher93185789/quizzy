@@ -34,6 +34,7 @@ export default function Home() {
         <div className="absolute w-full -bottom-15 h-full">
           <div className="w-full h-full flex items-center justify-center">
             <div className="bg-black shadow-outset  w-300 aspect-video overflow-hidden rounded-lg rotate-2">
+              {/* placeholder app demo should go here */}
               <iframe
                 width="100%"
                 height="100%"
