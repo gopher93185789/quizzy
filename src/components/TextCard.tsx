@@ -10,7 +10,7 @@ interface TextCardProps {
 export function TextCard({ text, title, titleColor, children }: TextCardProps) {
   return (
     <>
-      <div className="h-[80vh] overflow-hidden  shadow-inset p-10 w-full sm:w-1/4 flex flex-col rounded-xl shadow-lg bg-[#050505]">
+      <div className="h-[80vh] overflow-hidden  shadow-inset p-10 w-full lg:w-1/4 flex flex-col rounded-xl shadow-lg bg-[#050505]">
         <p className={`w-full h-1/12 text-4xl sm:text-5xl ${titleColor} font-bold`}>
           {title}
         </p>
