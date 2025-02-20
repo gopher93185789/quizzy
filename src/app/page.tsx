@@ -5,6 +5,8 @@ import { TextCard } from "@/components/TextCard";
 export default function Home() {
   return (
     <>
+      <div className="fixed hidden sm:flex z-10 left-0  h-full w-16 border border-white border-l-0 border-y-0 border-opacity-15"></div>
+
       <div className="w-full h-[400px] sm:h-[800px] overflow-hidden  relative bg-grid flex sm:items-center justify-center">
         <div className="absolute -top-24 left-48 h-1/2 aspect-video opacity-40">
           <svg
