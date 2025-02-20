@@ -14,7 +14,7 @@ export function TextCard({ text, title, titleColor, children }: TextCardProps) {
         <p className={`w-full text-4xl sm:text-5xl ${titleColor} font-bold`}>
           {title}
         </p>
-        <p className="w-full text-lg font-medium mt-5 overflow-hidden text-white text-opacity-50">
+        <p className="w-full text-lg font-medium mt-5 overflow-hidden text-white/50">
           {text}
         </p>
 

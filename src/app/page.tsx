@@ -1,11 +1,11 @@
-import { PixelImage } from "@/components/PixelatedImage";
 import { PlusSideBar } from "@/components/PlusSideBar";
 import { TextCard } from "@/components/TextCard";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <div className="fixed hidden sm:flex z-10 left-0  h-full w-16 border border-white border-l-0 border-y-0 border-opacity-15"></div>
+      <div className="fixed hidden sm:flex z-10 left-0  h-full w-16 border border-white/10 border-l-0 border-y-0"></div>
 
       <div className="w-full h-[400px] sm:h-[800px] overflow-hidden  relative bg-grid flex sm:items-center justify-center">
         <div className="absolute -top-24 left-48 h-1/2 aspect-video opacity-40">
@@ -52,17 +52,17 @@ export default function Home() {
         </div>
         <div className="h-1/4 bottom-0 w-full absolute bg-gradient-to-t from-[#060606]" />
         <div className="h-fit mt-36 select-none animate-slideup sm:mt-0 w-full sm:w-1/2  flex flex-col items-center justify-center">
-          <h1 className="text-4xl sm:text-7xl line-clamp-1 h-14 sm:h-24 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+          <h1 className="text-4xl overflow-hidden text-nowrap sm:text-7xl h-14 sm:h-20 font-bold text-center bg-clip-text text-transparent antialiased bg-gradient-to-b from-neutral-50 to-neutral-400/40">
             Quizzes, Simplified
           </h1>
-          <p className="sm:text-2xl w-2/3 sm:w-1/2 font-bold text-center text-white text-opacity-50">
+          <p className="sm:text-2xl w-2/3 sm:w-1/2 font-bold text-center text-white/50">
             Quizzy is the ultimate platform for fun, engaging, and gamified
             learning.
           </p>
 
-          <button className="text-black font-bold mt-5 sm:mt-10 py-1 px-8 text-2xl rounded-lg bg-white hover:bg-opacity-70 ease-in-out duration-300">
+          <Link href={"/quiz"} className="text-black font-bold mt-5 sm:mt-10 py-1 px-8 text-2xl rounded-lg bg-white hover:bg-white/70 ease-in-out duration-300">
             Start now
-          </button>
+          </Link>
         </div>
       </div>
 

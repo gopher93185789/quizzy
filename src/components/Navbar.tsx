@@ -17,11 +17,11 @@ export function RenderButtons() {
       <div className="h-full flex flex-row w-full justify-end">
         {buttons.map((item, key: number) => (
           <Link key={key} href={item.href} onClick={() => setPage(item.page)}>
-            <div className="group flex items-center justify-center duration-300 h-full w-fit border border-y-0 hover:bg-[#FF4000]  border-white border-l-0 border-opacity-15 ease-in-out">
+            <div className="group flex items-center justify-center duration-300 h-full w-fit border border-y-0 hover:bg-[#FF4000]  border-white/15 border-l-0 ease-in-out">
               <p
                 className={`px-5 text-center overflow-hidden whitespace-nowrap ${
-                  page === item.page ? "text-opacity-100" : "text-opacity-50"
-                } group-hover:text-opacity-100 duration-300  ease-in-out  text-white font-bold`}
+                  page === item.page ? "text-white" : "text-white/50"
+                } group-hover:text-white duration-300  ease-in-out   font-bold`}
               >
                 {item.title}
               </p>
@@ -30,7 +30,7 @@ export function RenderButtons() {
         ))}
 
         <Link target="_blank" href={"https://github.com/gopher93185789/quizzy"}>
-          <div className="group flex items-center justify-center duration-300 h-full aspect-square border border-y-0 hover:bg-[#FF4000]  border-white border-l-0 border-opacity-15 ease-in-out">
+          <div className="group flex items-center justify-center duration-300 h-full aspect-square border border-y-0 hover:bg-[#FF4000]  border-white/15 border-l-0 ease-in-out">
             <GitHubIcon className="text-white" />
           </div>
         </Link>
@@ -42,10 +42,10 @@ export function RenderButtons() {
 export function Navbar() {
   return (
     <>
-      <div className="w-full z-50 h-12 flex  bg-black border border-t-0 border-x-0 items-center  border-white border-opacity-15">
+      <div className="w-full z-50 h-12 flex  bg-black border border-t-0 border-x-0 items-center  border-white/15">
         <img
           src="/rcok.png"
-          className="h-full sm:flex hidden w-28 grayscale hover:grayscale-0 border border-y-0 border-l-0 border-white border-opacity-15 duration-300 ease-in-out hover:animate-spin"
+          className="h-full sm:flex hidden w-28 grayscale hover:grayscale-0 border border-y-0 border-l-0 border-white/15 duration-300 ease-in-out hover:animate-spin"
         />
 
         <RenderButtons />
