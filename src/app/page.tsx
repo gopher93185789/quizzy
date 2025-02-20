@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center pb-20 bg-primary">
+      <div className="w-full flex flex-col items-center bg-primary">
         <PlusSideBar />
         <div className="flex flex-col px-5 lg:flex-row justify-center gap-5 w-full h-full">
           <TextCard
@@ -63,7 +63,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-screen w-full bg-primary"></div>
+      <div className="h-screen w-full bg-primary">
+        <PlusSideBar />
+      </div>
     </>
   );
 }
