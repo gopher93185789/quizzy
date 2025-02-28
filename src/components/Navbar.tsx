@@ -14,7 +14,7 @@ export function RenderButtons() {
 
   return (
     <>
-      <div className="h-full flex flex-row w-full justify-end">
+      <div className="h-full flex flex-row w-fit m-0 p-0">
         {buttons.map((item, key: number) => (
           <Link key={key} href={item.href} onClick={() => setPage(item.page)}>
             <div className="group flex items-center justify-center duration-300 h-full w-fit border border-y-0 hover:bg-accent  border-white/15 border-l-0 ease-in-out">
@@ -30,7 +30,7 @@ export function RenderButtons() {
         ))}
 
         <Link target="_blank" href={"https://github.com/gopher93185789/quizzy"}>
-          <div className="group flex items-center justify-center duration-300 h-full aspect-square border border-y-0 hover:bg-accent  border-white/15 border-l-0 ease-in-out">
+          <div className="group flex items-center justify-center duration-300 h-full aspect-square border border-y-0 hover:bg-accent h-full aspect-square border-white/15 border-l-0 ease-in-out">
             <GitHubIcon className="text-white" />
           </div>
         </Link>
@@ -43,12 +43,9 @@ export function Navbar() {
   return (
     <>
       <div className="w-full z-50 h-12 flex  bg-[#050505] border border-t-0 border-x-0 items-center  border-white/15">
-        <img
-          src="/rcok.png"
-          className="h-full sm:flex hidden w-28 grayscale hover:grayscale-0 border border-y-0 border-l-0 border-white/15 duration-300 ease-in-out hover:animate-spin"
-        />
-
-        <RenderButtons />
+        <div className="w-full h-full flex justify-end">
+          <RenderButtons />
+        </div>
       </div>
     </>
   );
