@@ -29,11 +29,7 @@ export function RenderButtons() {
           </Link>
         ))}
 
-        <Link target="_blank" href={"https://github.com/gopher93185789/quizzy"}>
-          <div className="group flex items-center justify-center duration-300 h-full aspect-square border border-y-0 hover:bg-accent h-full aspect-square border-white/15 border-l-0 ease-in-out">
-            <GitHubIcon className="text-white" />
-          </div>
-        </Link>
+
       </div>
     </>
   );
