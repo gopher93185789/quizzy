@@ -26,8 +26,9 @@ export function SideNavbar() {
   return (
     <>
       <div className="h-full w-58 border p-5 border-r-white/10  bg-primary">
-      <div className="w-full h-fit flex flex-col gap-3">
-        {Array(5).fill(0).map((_, k) => (
+      <div className="w-full h-fit flex flex-col gap-2">
+        <p className="text-white font-bold text-xl">Quizzes</p>
+        {Array(3).fill(0).map((_, k) => (
             <IconButton key={k} title="Cybersecurity" icon={<SecurityIcon/>} />
         ))}
       </div>
