@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #060606;
   --color-accent: #FF4000;
+  --font-jersey: "jersey", "sans-serif"; 
 }
 
 body {
@@ -12,6 +13,14 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: 'jersey';
+  src: url('/font/Jersey15-Regular.ttf') format('truetype'), url('/font/Jersey15-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 .shadow-inset {
   box-shadow: inset 7px 7px 13px #000000, inset -7px -7px 13px #000000;
