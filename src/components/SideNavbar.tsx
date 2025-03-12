@@ -37,9 +37,9 @@ export function SideNavbar() {
 
       <div className="w-full h-fit flex flex-col gap-2">
         <p className="text-white font-bold text-xl">Rewards</p>
-        {Array(3).fill(0).map((_, k) => (
-            <IconButton key={k} title="Cybersecurity" />
-        ))}
+        <IconButton title="Cybersecurity" icon={<SecurityIcon/>} />
+        <IconButton title="Social media" icon={<LanguageIcon/>} />
+        <IconButton title="AI" icon={<PsychologyIcon/>} />
       </div>
 
       </div>
