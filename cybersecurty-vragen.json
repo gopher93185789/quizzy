@@ -1,0 +1,68 @@
+{
+    "questions": [
+      {
+        "question": "Wat doet een firewall?",
+        "options": {
+          "a": "monitoren wifi-connectie",
+          "b": "beschermen netwerk tegen niet-geautoriseerde toegang",
+          "c": "verkrijgen van verloren gegevens"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Wat is de functie van een vpn?",
+        "options": {
+          "a": "scannen voor virussen",
+          "b": "verbeteren prestaties van een netwerk",
+          "c": "verbergen ip-adres"
+        },
+        "correct_answer": "c"
+      },
+      {
+        "question": "Wat is een DDoS-aanval?",
+        "options": {
+          "a": "een wachtwoord-ontcijfer methode",
+          "b": "het overbelasten van een server",
+          "c": "persoonlijke informatie proberen te stelen"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Wat betekent security?",
+        "options": {
+          "a": "beveiliging",
+          "b": "verzekering",
+          "c": "vergrendeling"
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question": "Waar staat CNIL voor? Tip: het is een franse afkorting",
+        "options": {
+          "a": "Nationale Commissie voor Informatietechnologie en Vrijheden",
+          "b": "Nationale Commissie van Internetveiligheid en Bewustzijn",
+          "c": "Nationale Commissie voor Illegale Internetactiviteiten"
+        },
+        "correct_answer": "a"
+      },
+      {
+        "question": "Wat is een BadUSB?",
+        "options": {
+          "a": "een kapotte usb-port",
+          "b": "een usb-stick met malware",
+          "c": "een usb-stick die in de gevangenis zit"
+        },
+        "correct_answer": "b"
+      },
+      {
+        "question": "Wat doet de AVG (Algemene Verordening Gegevensbescherming)?",
+        "options": {
+          "a": "bedrijven die wachtwoorden bewaren monitoren",
+          "b": "bedrijven die servers hebben monitoren",
+          "c": "bedrijven die persoonsinformatie verwerken monitoren"
+        },
+        "correct_answer": "c"
+      }
+    ]
+}
+  

@@ -17,7 +17,7 @@ export default function Leaderboard() {
   return (
     <>
       <div className="w-full h-[calc(100vh-3rem)] bg-primary flex flex-col items-center justify-center">
-        <div className="bw-1/2  h-fit">
+        <div className="w-1/2  h-fit border border-white/50 p-10 rounded-xl">
           <p className="text-white text-6xl font-jersey text-center">Top scores</p>
           <div className="w-full mt-10 h-fit flex flex-col gap-10">
               <PlayerScore PlayerName="scott" PlayerScore="1372" />

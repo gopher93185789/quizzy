@@ -34,11 +34,6 @@ export function SideNavbar() {
         <IconButton title="Social media" icon={<LanguageIcon/>} />
         <IconButton title="AI" icon={<PsychologyIcon/>} />
       </div>
-
-  
-
-
-
       </div>
     </>
   );
