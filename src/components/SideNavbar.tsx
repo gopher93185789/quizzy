@@ -35,12 +35,9 @@ export function SideNavbar() {
         <IconButton title="AI" icon={<PsychologyIcon/>} />
       </div>
 
-      <div className="w-full h-fit flex flex-col gap-2">
-        <p className="text-white font-bold text-xl">Rewards</p>
-        <IconButton title="Cybersecurity" icon={<SecurityIcon/>} />
-        <IconButton title="Social media" icon={<LanguageIcon/>} />
-        <IconButton title="AI" icon={<PsychologyIcon/>} />
-      </div>
+  
+
+
 
       </div>
     </>
