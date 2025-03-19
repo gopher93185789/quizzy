@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 export function RenderButtons() {
   const [page, setPage] = useState<string>("home");
