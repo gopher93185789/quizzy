@@ -3,14 +3,10 @@
 import { QuizBox } from "@/components/QuizBox";
 import { SideNavbar } from "@/components/SideNavbar";
 import { AiVragen, MeerkeuzeVraag } from "@/pkg/Questions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Quiz() {
   const [currentQuiz, setCurrentQuiz] = useState<MeerkeuzeVraag[]>(AiVragen)
-  
-  useEffect(() => {
-    console.log(currentQuiz)
-  }, [currentQuiz])
 
     return (
       <>

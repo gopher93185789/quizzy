@@ -119,6 +119,7 @@ const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
   }, [idx]);
 
   useEffect(() => {
+    // localStorage.setItem(JSON.stringify(QuizData),points.toString()) logic error here
     setIdx(0)
     setCurrentQuestion(QuizData[0]);
     setchecked(false);

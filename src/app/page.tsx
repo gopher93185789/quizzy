@@ -2,6 +2,8 @@ import { HeadRandomized, ShieldRandomized, WorldRandomized } from "@/components/
 import { PlusSideBar } from "@/components/PlusSideBar";
 import { Spotlight } from "@/components/Spotlight";
 import { TextCard } from "@/components/TextCard";
+import app from "../../public/image.png"
+import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -148,13 +150,8 @@ export default function Home() {
         <div className="absolute w-full -bottom-15 h-full">
           <div className="w-full h-full flex items-center justify-center">
             <div className="bg-black shadow-outset  w-300 aspect-video overflow-hidden rounded-lg rotate-2">
-              {/* placeholder app demo should go here */}
-              <iframe
-                src="https://www.youtube.com/embed/fRk6K-H1Lxc?autoplay=1&loop=1&playlist=fRk6K-H1Lxc"
-                className="h-full w-full"
-                allow="autoplay; encrypted-media"
-              />
-            </div>
+              <Image src={app} alt="app demo"/>
+            </div> 
           </div>
         </div>
       </div>
