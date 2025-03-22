@@ -1,19 +1,23 @@
+import { ParseOpenQuestion } from "@/pkg/Parser";
 import { MeerkeuzeVraag } from "@/pkg/Questions";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface QuizBoxProps {
   QuizData: MeerkeuzeVraag[];
+  currentQuizName: string;
 }
 
 interface InnerQuizBoxProps {
   numberOfQuestions: number;
   currQuestion: MeerkeuzeVraag;
   QuestionIndex: number;
+  currentQuizName: string
 }
 
 interface MainQuizBoxProps {
   QuizData: MeerkeuzeVraag[];
+  currentQuizName: string
   points: number;
   setPoints: Dispatch<SetStateAction<number>>;
 }
@@ -39,12 +43,15 @@ const QuestionInfoSection = ({
   QuestionIndex,
   numberOfQuestions,
   currQuestion,
+  currentQuizName,
 }: InnerQuizBoxProps) => {
   return (
     <>
       <div className="h-fit w-full flex flex-row items-center justify-between">
         <div id="timer" className="flex flex-row items-center gap-2">
-          <p className="text-white text-3xl font-bold">AI Quiz</p>
+          <p className="text-white text-3xl font-bold">
+            {currentQuizName} Quiz
+          </p>
         </div>
 
         <div id="score" className="flex flex-row items-center gap-2">
@@ -80,7 +87,11 @@ const QuestionInfoSection = ({
   );
 };
 
-const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
+const MainSection = ({
+  QuizData,
+  currentQuizName,
+  setPoints,
+}: MainQuizBoxProps) => {
   const numberOfQuestions = QuizData.length;
   const [idx, setIdx] = useState<number>(0);
   const [answer, setAnswer] = useState<string>("");
@@ -88,14 +99,13 @@ const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
   const [correct, setCorrect] = useState<boolean>(true);
   const [textArea, setTextArea] = useState<string>("");
 
-
-
   const [currQuestion, setCurrentQuestion] = useState<MeerkeuzeVraag>(
     QuizData[0]
   );
 
   const handleCheck = (): boolean => {
     if (currQuestion.type == "open") {
+      setAnswer(textArea);
       setchecked(true);
       return true;
     }
@@ -107,32 +117,45 @@ const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
     }
 
     setchecked(true);
-    setCorrect(false)
+    setCorrect(false);
     return false;
+  };
+
+  const handleNext = () => {
+    if (currQuestion.type == "open") {
+      const points = ParseOpenQuestion(textArea, currQuestion.correct);
+      setPoints((prev) => prev + points);
+    }
+
+    if (idx + 1 != QuizData.length) {
+      setIdx((prev) => prev + 1);
+    }
+    setTextArea("");
   };
 
   useEffect(() => {
     setCurrentQuestion(QuizData[idx]);
     setchecked(false);
     setAnswer("");
-    setCorrect(true)
+    setCorrect(true);
   }, [idx]);
 
   useEffect(() => {
     // localStorage.setItem(JSON.stringify(QuizData),points.toString()) logic error here
-    setIdx(0)
+    setIdx(0);
     setCurrentQuestion(QuizData[0]);
     setchecked(false);
     setAnswer("");
     setCorrect(true);
-    setTextArea("")
-    setPoints(0)
+    setTextArea("");
+    setPoints(0);
   }, [QuizData]);
 
   return (
     <>
       <div className="h-full w-full p-8 relative overflow-hidden">
         <QuestionInfoSection
+          currentQuizName={currentQuizName}
           currQuestion={currQuestion}
           QuestionIndex={idx + 1}
           numberOfQuestions={numberOfQuestions}
@@ -144,6 +167,7 @@ const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
         {currQuestion.type == "open" ? (
           <textarea
             value={textArea}
+            onClick={() => setAnswer(textArea)}
             onChange={(e) => setTextArea(e.target.value)}
             className="w-full mt-5 border-1 p-3 min-h-30 max-h-74  text-white border-white/15 rounded-lg"
           />
@@ -175,17 +199,15 @@ const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
 
         {checked ? (
           <button
-            onClick={() => {
-              if (idx + 1 != QuizData.length) setIdx((prev) => prev + 1);
-            }}
-            className="h-fit w-fit bg-white text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl"
+            onClick={handleNext}
+            className="h-fit w-fit bg-white hover:cursor-pointer text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl"
           >
             Next question
           </button>
         ) : (
           <button
             onClick={() => handleCheck()}
-            className="h-fit w-fit bg-white hover:bg-white/80 duration-300 ease-in-out active:scale-99 will-change-transform text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl"
+            className="h-fit w-fit bg-white hover:cursor-pointer hover:bg-white/80 duration-300 ease-in-out active:scale-99 will-change-transform text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl"
           >
             Check
           </button>
@@ -195,7 +217,7 @@ const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
   );
 };
 
-export function QuizBox({ QuizData }: QuizBoxProps) {
+export function QuizBox({ QuizData, currentQuizName }: QuizBoxProps) {
   const [points, setPoints] = useState<number>(0);
 
   return (
@@ -210,6 +232,7 @@ export function QuizBox({ QuizData }: QuizBoxProps) {
         <div className="h-full w-full bg-primary  rounded-r-lg overflow-hidden flex flex-col">
           <TopSection points={points} />
           <MainSection
+            currentQuizName={currentQuizName}
             points={points}
             setPoints={setPoints}
             QuizData={QuizData}

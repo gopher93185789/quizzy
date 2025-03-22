@@ -7,13 +7,18 @@ import { useState } from "react";
 
 export default function Quiz() {
   const [currentQuiz, setCurrentQuiz] = useState<MeerkeuzeVraag[]>(AiVragen)
+  const [currentQuizName, setCurrentQuizName] = useState("AI")
 
     return (
       <>
         <div className="w-full h-[calc(100vh-3rem)] flex flex-row">
-          <SideNavbar currentQuiz={currentQuiz} setCurrentQuiz={setCurrentQuiz} />
+          <SideNavbar
+            setCurrentQuizName={setCurrentQuizName}
+            currentQuiz={currentQuiz}
+            setCurrentQuiz={setCurrentQuiz}
+          />
           <div className="w-full h-full bg-grid flex items-center justify-center ">
-            <QuizBox QuizData={currentQuiz} />
+            <QuizBox currentQuizName={currentQuizName} QuizData={currentQuiz} />
           </div>
         </div>
       </>
