@@ -2,11 +2,8 @@ export interface MeerkeuzeVraag {
   vraag: string;
   opties: string[];
   correct: string;
-  type: string
+  type: string;
 }
-
-// multi q are worth "2"0
-// type: "multi"0p
 
 export const AiVragen: MeerkeuzeVraag[] = [
   {
@@ -16,8 +13,8 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Alternative Intelligence",
       "Adaptive Intelligence",
     ],
-    correct: "0",
-    type: "multi"
+    correct: "Artificial Intelligence",
+    type: "multi",
   },
   {
     vraag: "Wat is NLP, natural language processing?",
@@ -26,8 +23,8 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Het omzetten van mensentaal naar computertaal",
       "Het creëren van chatbots",
     ],
-    correct: "1",
-    type: "multi"
+    correct: "Het omzetten van mensentaal naar computertaal",
+    type: "multi",
   },
   {
     vraag: "Wat houdt AI-bias in?",
@@ -36,8 +33,9 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "De persoonlijke voorkeuren die een chatbot voor zichzelf genereert",
       "Een vooroordeel dat bij AI ontstaat door bevooroordeelde gegevens",
     ],
-    correct: "2",
-    type: "multi"
+    correct:
+      "Een vooroordeel dat bij AI ontstaat door bevooroordeelde gegevens",
+    type: "multi",
   },
   {
     vraag: "Wat is een deepfake?",
@@ -46,8 +44,8 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Een foto die is bewerkt met Photoshop",
       "Een video waarin AI iemands gezicht of stem vervalst",
     ],
-    correct: "2",
-    type: "multi"
+    correct: "Een video waarin AI iemands gezicht of stem vervalst",
+    type: "multi",
   },
   {
     vraag: "Waar staat GPT voor?",
@@ -56,8 +54,8 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Generally Positive Tool",
       "Genius Processing Terminal",
     ],
-    correct: "0",
-    type: "multi"
+    correct: "Generative Pre-trained Transformer",
+    type: "multi",
   },
   {
     vraag: "Welke van deze AI-systemen gebruikt geen NLP?",
@@ -66,8 +64,8 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Een zelfrijdende auto",
       "Een zoekmachine die spraakopdrachten begrijpt",
     ],
-    correct: "1",
-    type: "multi"
+    correct: "Een zelfrijdende auto",
+    type: "multi",
   },
   {
     vraag:
@@ -77,8 +75,8 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Eigen creativiteit",
       "Transparantie en uitlegbaarheid",
     ],
-    correct: "2",
-    type: "multi"
+    correct: "Transparantie en uitlegbaarheid",
+    type: "multi",
   },
   {
     vraag: "Wat is een Turingtest?",
@@ -87,20 +85,20 @@ export const AiVragen: MeerkeuzeVraag[] = [
       "Een test om te zien hoe goed een AI zich als mens kan voordoen",
       "Een test om te zien of een AI weet wie Alan Turing is",
     ],
-    correct: "1",
-    type: "multi"
+    correct: "Een test om te zien hoe goed een AI zich als mens kan voordoen",
+    type: "multi",
   },
   {
     vraag: "Waar gebruikt een AI CNN (Convolutional Neural Network) voor?",
     opties: ["Spraakherkenning", "Grote berekeningen", "Foto-herkenning"],
-    correct: "2",
-    type: "multi"
+    correct: "Foto-herkenning",
+    type: "multi",
   },
   {
     vraag: "NPC's in games zijn AI.",
     opties: ["Waar", "Niet waar", "Soms"],
-    correct: "2",
-    type: "multi"
+    correct: "Soms",
+    type: "multi",
   },
 ];
 
@@ -112,14 +110,14 @@ export const SocialMediaVragen: MeerkeuzeVraag[] = [
       "Zorgt voor persoonlijk contact met creators",
       "Bepalen wat gebruiker te zien krijgt",
     ],
-    correct: "2",
-    type: "multi"
+    correct: "Bepalen wat gebruiker te zien krijgt",
+    type: "multi",
   },
   {
     vraag: "Welk platform was tijdelijk verbannen in de Verenigde Staten?",
     opties: ["TikTok", "Snapchat", "Facebook"],
-    correct: "0",
-    type: "multi"
+    correct: "TikTok",
+    type: "multi",
   },
   {
     vraag: "Wat is de primaire functie van een hashtag?",
@@ -128,20 +126,20 @@ export const SocialMediaVragen: MeerkeuzeVraag[] = [
       "Categoriseren van video’s",
       "Het heeft geen functie, gewoon decoratie",
     ],
-    correct: "1",
-    type: "multi"
+    correct: "Categoriseren van video’s",
+    type: "multi",
   },
   {
     vraag: "Welk platform startte short-form content?",
     opties: ["Vine", "TikTok", "MySpace"],
-    correct: "0",
-    type: "multi"
+    correct: "Vine",
+    type: "multi",
   },
   {
     vraag: "Welk social media platform werd het eerst gecreëerd?",
     opties: ["MySpace", "LinkedIn", "Facebook"],
-    correct: "1",
-    type: "multi"
+    correct: "LinkedIn",
+    type: "multi",
   },
   {
     vraag: "Wat is de beste manier om met haatreacties om te gaan?",
@@ -150,14 +148,14 @@ export const SocialMediaVragen: MeerkeuzeVraag[] = [
       "De discussie aangaan met de schrijver",
       "Het bericht rapporteren en negeren",
     ],
-    correct: "2",
-    type: "multi"
+    correct: "Het bericht rapporteren en negeren",
+    type: "multi",
   },
   {
     vraag: "Wat is een DM?",
     opties: ["Een Dungeon Master", "Een Direct Message", "Een Discord Message"],
-    correct: "1",
-    type: "multi"
+    correct: "Een Direct Message",
+    type: "multi",
   },
   {
     vraag: "Wat is een shadowban?",
@@ -166,15 +164,16 @@ export const SocialMediaVragen: MeerkeuzeVraag[] = [
       "Wanneer een account minder of niet meer zichtbaar wordt gemaakt zonder dat de eigenaar dit weet",
       "Een ban uitgevoerd door een anonieme persoon",
     ],
-    correct: "1",
-    type: "multi"
+    correct:
+      "Wanneer een account minder of niet meer zichtbaar wordt gemaakt zonder dat de eigenaar dit weet",
+    type: "multi",
   },
   {
     vraag:
       "Hoe heet het psychologische effect waardoor je sneller extreme meningen overneemt van het internet?",
     opties: ["Confirmation-bias", "Mandela-effect", "Placebo-effect"],
-    correct: "0",
-    type: "multi"
+    correct: "Confirmation-bias",
+    type: "multi",
   },
   {
     vraag:
@@ -184,7 +183,7 @@ export const SocialMediaVragen: MeerkeuzeVraag[] = [
       "Jouw eerdere interacties",
       "Jouw hoeveelheid volgers",
     ],
-    correct: "2",
-    type: "multi"
+    correct: "Jouw hoeveelheid volgers",
+    type: "multi",
   },
 ];

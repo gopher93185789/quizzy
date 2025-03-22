@@ -1,11 +1,6 @@
 import { MeerkeuzeVraag } from "@/pkg/Questions";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import { useState } from "react";
-
-const q = 6;
-const score = 834;
-const qType = "open";
-const checked = false;
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 interface QuizBoxProps {
   QuizData: MeerkeuzeVraag[];
@@ -19,9 +14,15 @@ interface InnerQuizBoxProps {
 
 interface MainQuizBoxProps {
   QuizData: MeerkeuzeVraag[];
+  points: number;
+  setPoints: Dispatch<SetStateAction<number>>;
 }
 
-const TopSection = () => (
+interface TopSectionProps {
+  points: number;
+}
+
+const TopSection = ({ points }: TopSectionProps) => (
   <div className="h-fit w-full border-x-0 border-t-0 border border-b-white/5 border-b-2 py-4 px-8 flex flex-row items-center justify-between">
     <div id="timer" className="flex flex-row items-center gap-2">
       <AccessTimeIcon className="text-white/50" />
@@ -29,7 +30,7 @@ const TopSection = () => (
     </div>
 
     <div id="score" className="flex flex-row items-center gap-2">
-      <p className="text-white/50 font-mono ">Score: {score}</p>
+      <p className="text-white/50 font-mono ">Score: {points}</p>
     </div>
   </div>
 );
@@ -79,12 +80,53 @@ const QuestionInfoSection = ({
   );
 };
 
-const MainSection = ({ QuizData }: MainQuizBoxProps) => {
+const MainSection = ({ QuizData, points, setPoints }: MainQuizBoxProps) => {
   const numberOfQuestions = QuizData.length;
   const [idx, setIdx] = useState<number>(0);
+  const [answer, setAnswer] = useState<string>("");
+  const [checked, setchecked] = useState<boolean>(false);
+  const [correct, setCorrect] = useState<boolean>(true);
+  const [textArea, setTextArea] = useState<string>("");
+
+
+
   const [currQuestion, setCurrentQuestion] = useState<MeerkeuzeVraag>(
-    QuizData[idx]
+    QuizData[0]
   );
+
+  const handleCheck = (): boolean => {
+    if (currQuestion.type == "open") {
+      setchecked(true);
+      return true;
+    }
+
+    if (answer === currQuestion.correct) {
+      setPoints((prev) => prev + 200);
+      setchecked(true);
+      return true;
+    }
+
+    setchecked(true);
+    setCorrect(false)
+    return false;
+  };
+
+  useEffect(() => {
+    setCurrentQuestion(QuizData[idx]);
+    setchecked(false);
+    setAnswer("");
+    setCorrect(true)
+  }, [idx]);
+
+  useEffect(() => {
+    setIdx(0)
+    setCurrentQuestion(QuizData[0]);
+    setchecked(false);
+    setAnswer("");
+    setCorrect(true);
+    setTextArea("")
+    setPoints(0)
+  }, [QuizData]);
 
   return (
     <>
@@ -99,13 +141,30 @@ const MainSection = ({ QuizData }: MainQuizBoxProps) => {
         </p>
 
         {currQuestion.type == "open" ? (
-          <textarea className="w-full mt-5 border-1 p-3 min-h-30 max-h-74  text-white border-white/15 rounded-lg"></textarea>
+          <textarea
+            value={textArea}
+            onChange={(e) => setTextArea(e.target.value)}
+            className="w-full mt-5 border-1 p-3 min-h-30 max-h-74  text-white border-white/15 rounded-lg"
+          />
         ) : (
           <div className="w-full h-fit flex flex-col mt-5 gap-5">
             {currQuestion.opties.map((item, key) => (
               <div
                 key={key}
-                className="w-full border-white/15 hover:border-white flex items-center p-2 active:scale-99 duration-300 ease-in-out border-1 h-16 rounded-r-xl rounded-l-xl"
+                onClick={() => setAnswer(item)}
+                className={`w-full ${
+                  answer === item
+                    ? "border-white"
+                    : "border-white/15 hover:border-white "
+                } ${
+                  checked && item === currQuestion.correct
+                    ? "bg-green-600/40"
+                    : ""
+                } 
+                ${
+                  checked && !correct && item === answer ? "bg-red-600/40" : ""
+                }  
+                flex items-center select-none p-2 active:scale-99 duration-300 ease-in-out border-1 h-16 rounded-r-xl rounded-l-xl`}
               >
                 <p className="text-white/80 text-xl font-medium">{item}</p>
               </div>
@@ -115,13 +174,18 @@ const MainSection = ({ QuizData }: MainQuizBoxProps) => {
 
         {checked ? (
           <button
-            onClick={() => {}}
+            onClick={() => {
+              if (idx + 1 != QuizData.length) setIdx((prev) => prev + 1);
+            }}
             className="h-fit w-fit bg-white text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl"
           >
             Next question
           </button>
         ) : (
-          <button className="h-fit w-fit bg-white text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl">
+          <button
+            onClick={() => handleCheck()}
+            className="h-fit w-fit bg-white hover:bg-white/80 duration-300 ease-in-out active:scale-99 will-change-transform text-black px-7 py-1 rounded-lg font-semibold absolute bottom-8 right-8 text-xl"
+          >
             Check
           </button>
         )}
@@ -131,6 +195,8 @@ const MainSection = ({ QuizData }: MainQuizBoxProps) => {
 };
 
 export function QuizBox({ QuizData }: QuizBoxProps) {
+  const [points, setPoints] = useState<number>(0);
+
   return (
     <>
       <div className="w-3/4 h-3/4   flex flex-row">
@@ -141,8 +207,12 @@ export function QuizBox({ QuizData }: QuizBoxProps) {
           ></img>
         </div>
         <div className="h-full w-full bg-primary  rounded-r-lg overflow-hidden flex flex-col">
-          <TopSection />
-          <MainSection QuizData={QuizData} />
+          <TopSection points={points} />
+          <MainSection
+            points={points}
+            setPoints={setPoints}
+            QuizData={QuizData}
+          />
         </div>
       </div>
     </>

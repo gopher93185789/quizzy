@@ -4,6 +4,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import LanguageIcon from '@mui/icons-material/Language';
 import { Dispatch, ReactNode, SetStateAction } from "react";
+import { AiVragen, MeerkeuzeVraag, SocialMediaVragen } from "@/pkg/Questions";
 
 interface IconButtonProps {
     title: string
@@ -25,8 +26,8 @@ export function IconButton({title, icon, onClick}:IconButtonProps) {
 }
 
 interface SideNavbarProps {
-  currentQuiz: string
-  setCurrentQuiz: Dispatch<SetStateAction<string>>
+  currentQuiz: MeerkeuzeVraag[]
+  setCurrentQuiz: Dispatch<SetStateAction<MeerkeuzeVraag[]>>
 }
 
 export function SideNavbar({setCurrentQuiz}: SideNavbarProps) {
@@ -36,9 +37,9 @@ export function SideNavbar({setCurrentQuiz}: SideNavbarProps) {
         <div className="w-full h-fit flex flex-col gap-2">
           <div className="w-full flex flex-row"></div>
           <p className="text-white font-bold text-xl">Quizzes</p>
-          <IconButton onClick={() => setCurrentQuiz("cybersecurity")} title="Cybersecurity" icon={<SecurityIcon />} />
-          <IconButton onClick={() => setCurrentQuiz("social-media")} title="Social media" icon={<LanguageIcon />} />
-          <IconButton onClick={() => setCurrentQuiz("ai")} title="AI" icon={<PsychologyIcon />} />
+          <IconButton onClick={() => setCurrentQuiz([])} title="Cybersecurity" icon={<SecurityIcon />} />
+          <IconButton onClick={() => setCurrentQuiz(SocialMediaVragen)} title="Social media" icon={<LanguageIcon />} />
+          <IconButton onClick={() => setCurrentQuiz(AiVragen)} title="AI" icon={<PsychologyIcon />} />
         </div>
       </div>
     </>
