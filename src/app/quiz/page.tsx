@@ -2,6 +2,7 @@
 
 import { QuizBox } from "@/components/QuizBox";
 import { SideNavbar } from "@/components/SideNavbar";
+import { AiVragen } from "@/pkg/Questions";
 import { useEffect, useState } from "react";
 
 export default function Quiz() {
@@ -16,7 +17,7 @@ export default function Quiz() {
         <div className="w-full h-[calc(100vh-3rem)] flex flex-row">
           <SideNavbar currentQuiz={currentQuiz} setCurrentQuiz={setCurrentQuiz} />
           <div className="w-full h-full bg-grid flex items-center justify-center ">
-            <QuizBox />
+            <QuizBox QuizData={AiVragen} />
           </div>
         </div>
       </>
