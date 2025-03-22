@@ -9,7 +9,6 @@ export function RenderButtons() {
     { page: "home", href: "/", title: "Home" },
     { page: "leaderboard", href: "/leaderboard", title: "Leaderboard" },
     { page: "quiz", href: "/quiz", title: "Take the quiz" },
-    { page: "account", href: "/account", title: "login" },
   ];
 
   return (
